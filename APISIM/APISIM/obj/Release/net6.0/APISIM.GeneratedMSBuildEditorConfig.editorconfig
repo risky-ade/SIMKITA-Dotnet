@@ -8,17 +8,9 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = APISIM
 build_property.RootNamespace = APISIM
-<<<<<<< HEAD
-build_property.ProjectDir = F:\File Program\vs\SIMKITA-Dotnet\APISIM\APISIM\
-build_property.RazorLangVersion = 6.0
-build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = F:\File Program\vs\SIMKITA-Dotnet\APISIM\APISIM
-=======
 build_property.ProjectDir = D:\PRIORITAS KULIAH\6SEMESTER\NET\SIMKITA-Dotnet\APISIM\APISIM\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = D:\PRIORITAS KULIAH\6SEMESTER\NET\SIMKITA-Dotnet\APISIM\APISIM
->>>>>>> 0bd00c072f3a4a52088e1df9568deb1604489848
 build_property._RazorSourceGeneratorDebug = 
