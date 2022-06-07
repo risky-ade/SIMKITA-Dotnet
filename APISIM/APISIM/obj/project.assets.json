@@ -10741,11 +10741,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\File Program\\vs\\Dotnet\\APISIM\\APISIM\\APISIM.csproj",
+      "projectUniqueName": "F:\\File Program\\vs\\SIMKITA-Dotnet\\APISIM\\APISIM\\APISIM.csproj",
       "projectName": "APISIM",
-      "projectPath": "F:\\File Program\\vs\\Dotnet\\APISIM\\APISIM\\APISIM.csproj",
+      "projectPath": "F:\\File Program\\vs\\SIMKITA-Dotnet\\APISIM\\APISIM\\APISIM.csproj",
       "packagesPath": "C:\\Users\\risky\\.nuget\\packages\\",
-      "outputPath": "F:\\File Program\\vs\\Dotnet\\APISIM\\APISIM\\obj\\",
+      "outputPath": "F:\\File Program\\vs\\SIMKITA-Dotnet\\APISIM\\APISIM\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

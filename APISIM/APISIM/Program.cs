@@ -12,10 +12,10 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DataContext");
 builder.Services.AddDbContext<DataContext>(option => 
 option.UseSqlServer(connectionString));
-
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<DataContext>()
-    .AddDefaultTokenProviders();
+                .AddEntityFrameworkStores<DataContext>()
+                .AddDefaultTokenProviders();
+
 builder.Services.AddAuthentication(option =>
 {
     option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -58,9 +58,14 @@ if (app.Environment.IsDevelopment())
 
     app.UseSwagger();
     app.UseSwaggerUI();
+    
+    
 }
 
 app.UseHttpsRedirection();
+
+app.UseRouting();
+app.UseCors();
 app.UseAuthentication();
 app.UseAuthorization();
 
