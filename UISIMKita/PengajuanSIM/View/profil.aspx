@@ -160,14 +160,7 @@
                                     <div class="form-group row mb-2">
                                         <label class="col-sm-3 col-form-label">Jenis Kelamin</label>
                                         <div class="col-sm-9">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" id="inlineradio1" value="option1">
-                                                <label class="form-check-label" for="inlineradio1">Laki-Laki</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" id="inlineradio2" value="option2" disabled>
-                                                <label class="form-check-label" for="inlineradio2">Perempuan</label>
-                                            </div>
+                                            <input type="text" class="form-control" required="" value="Laki-Laki">
                                             <div class="invalid-feedback">
                                                 What's your name?
                                             </div>
@@ -270,17 +263,7 @@
                         </div>
                     </div>
                 </main> 
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted"></div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
+                <footer class="py-4 bg-light mt-auto">                    
                 </footer>  
             </div>
         </div>
