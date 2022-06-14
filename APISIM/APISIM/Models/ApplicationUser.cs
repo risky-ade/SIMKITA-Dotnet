@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿/*using Microsoft.AspNetCore.Identity;
 
 namespace APISIM.Models
 {
@@ -8,3 +8,4 @@ namespace APISIM.Models
         public string? LastName { get; set; }
     }
 }
+*/

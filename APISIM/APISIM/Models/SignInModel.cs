@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿/*using System.ComponentModel.DataAnnotations;
 
 namespace APISIM.Models
 {
@@ -10,3 +10,4 @@ namespace APISIM.Models
         public string? Password { get; set; }
     }
 }
+*/

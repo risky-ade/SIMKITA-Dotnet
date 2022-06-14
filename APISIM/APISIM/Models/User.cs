@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace APISIM.Models
 {
-    public class User
+    public class User 
     {
         public int Id { get; set; }
         public string? Nama { get; set; }
@@ -17,5 +18,9 @@ namespace APISIM.Models
         public string? JenisKelamin { get; set; }
         public string? Agama { get; set; }
         public sbyte Status { get; set; }
+        public string? IdRole { get; set; }
+
+        [JsonIgnore]
+        public string? Password { get; set; }
     }
 }

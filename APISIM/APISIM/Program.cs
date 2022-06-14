@@ -1,3 +1,4 @@
+using APISIM.Helpers;
 using APISIM.Models;
 using APISIM.Repositories;
 using APISIM.Services;
@@ -10,19 +11,28 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 //configurasi DataContext
 var connectionString = builder.Configuration.GetConnectionString("DataContext");
-builder.Services.AddDbContext<DataContext>(option => 
+builder.Services.AddDbContext<DataContext>(option =>
 option.UseSqlServer(connectionString));
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<DataContext>()
-                .AddDefaultTokenProviders();
 
-builder.Services.AddAuthentication(option =>
+/*builder.Services.AddDbContext<DataContext>(
+    options =>
+    {
+        options.UseMySQL(builder.Configuration.GetConnectionString("DataContext"),
+            Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.23-mysql"));
+
+    });*/
+
+/*builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<DataContext>()
+                .AddDefaultTokenProviders();*/
+
+/*builder.Services.AddAuthentication(option =>
 {
     option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     option.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-    .AddJwtBearer(options =>
+})*/
+/*    .AddJwtBearer(options =>
     {
         options.SaveToken = true;
         options.RequireHttpsMetadata = false;
@@ -34,11 +44,17 @@ builder.Services.AddAuthentication(option =>
             ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]))
         };
-    });
+    });*/
+
+// configure strongly typed settings object
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
+
+// configure DI for application services
+builder.Services.AddScoped<IAuthService, AuthService>();
 // configurasi aplication services
-builder.Services.AddScoped<UserServices>();
+builder.Services.AddScoped<UserService>();
 builder.Services.AddControllers();
-builder.Services.AddTransient<IAccountRepository, AccountRepository>();
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -49,12 +65,6 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    //initialize database
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
-    using var serviceScope = app.Services.GetService<IServiceScopeFactory>().CreateScope();
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
-    using var db = serviceScope.ServiceProvider.GetRequiredService<DataContext>();
-    db.Database.EnsureCreated();
 
     app.UseSwagger();
     app.UseSwaggerUI();
