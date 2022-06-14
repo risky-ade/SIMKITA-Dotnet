@@ -2,6 +2,7 @@
 using APISIM.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic;
 
 namespace APISIM.Controllers
 {
@@ -29,7 +30,7 @@ namespace APISIM.Controllers
             return Unauthorized();
         }
 
-        [HttpPost("login")]
+        [HttpPost("signin")]
         public async Task<IActionResult> Login([FromBody] SignInModel signInModel)
         {
             var result = await _accountRepository.LoginAsync(signInModel);

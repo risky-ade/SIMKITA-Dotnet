@@ -1,10 +1,13 @@
-﻿namespace APISIM.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace APISIM.Models
 {
     public class User
     {
         public int Id { get; set; }
         public string? Nama { get; set; }
         public string? Username { get; set; }
+        [EmailAddress]
         public string? Email { get; set; }
         public string? Nik { get; set; }
         public string? TempatLahir { get; set; }
