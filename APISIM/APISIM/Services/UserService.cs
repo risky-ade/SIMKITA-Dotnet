@@ -1,5 +1,5 @@
-﻿using APISIM.Models;
-using APISIM.Repositories;
+﻿/*using APISIM.Models;
+using APISIM.Data;
 
 namespace APISIM.Services
 {
@@ -14,9 +14,7 @@ namespace APISIM.Services
 
         public User Get(int id)
         {
-#pragma warning disable CS8603 // Possible null reference return.
             return _context.Users.Find(id);
-#pragma warning restore CS8603 // Possible null reference return.
         }
         public List<User> GetList()
         {
@@ -45,3 +43,4 @@ namespace APISIM.Services
         }
     }
 }
+*/

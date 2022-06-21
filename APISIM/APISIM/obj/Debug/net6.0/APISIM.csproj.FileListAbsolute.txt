@@ -833,3 +833,4 @@ E:\KULIAH\e-sim\APISIM\APISIM\bin\Debug\net6.0\Ubiety.Dns.Core.dll
 E:\KULIAH\e-sim\APISIM\APISIM\bin\Debug\net6.0\ZstdNet.dll
 E:\KULIAH\e-sim\APISIM\APISIM\bin\Debug\net6.0\MySql.EntityFrameworkCore.dll
 E:\KULIAH\e-sim\APISIM\APISIM\bin\Debug\net6.0\MySqlConnector.dll
+E:\KULIAH\e-sim\APISIM\APISIM\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll

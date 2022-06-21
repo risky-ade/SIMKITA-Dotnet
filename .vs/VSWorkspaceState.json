@@ -1,7 +1,19 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
     ""
   ],
   "SelectedNode": "\\APISIM.sln",
+=======
+    "",
+    "\\APISIM\\APISIM",
+    "\\UISIMKita",
+    "\\UISIMKita\\PengajuanSIM",
+    "\\UISIMKita\\PengajuanSIM\\assets",
+    "\\UISIMKita\\PengajuanSIM\\assets\\img",
+    "\\UISIMKita\\PengajuanSIM\\View"
+  ],
+  "SelectedNode": "\\UISIMKita\\PengajuanSIM\\View\\IsiFormulir.aspx",
+>>>>>>> b139715c975f06d3cd55d699d7fa9e0b2c5cea60
   "PreviewInSolutionExplorer": false
 }

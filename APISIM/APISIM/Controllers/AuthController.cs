@@ -1,7 +1,7 @@
 ﻿using APISIM.Dto;
 using APISIM.Helpers;
 using APISIM.Models;
-using APISIM.Repositories;
+using APISIM.Data;
 using APISIM.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace APISIM.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/signin")]
     [ApiController]
     public class AuthController : ControllerBase
     {

@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace APISIM.Models
 {
-    public class User 
+    public class User : BaseEntity
     {
         public int Id { get; set; }
         public string? Nama { get; set; }
@@ -11,12 +11,8 @@ namespace APISIM.Models
         [EmailAddress]
         public string? Email { get; set; }
         public string? Nik { get; set; }
-        public string? TempatLahir { get; set; }
-        public DateTime? TglLahir { get; set; }
         public string? Telepon { get; set; }
         public string? Alamat { get; set; }
-        public string? JenisKelamin { get; set; }
-        public string? Agama { get; set; }
         public sbyte Status { get; set; }
         public string? IdRole { get; set; }
 

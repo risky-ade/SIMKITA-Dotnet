@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using APISIM.Models;
-using APISIM.Repositories;
+using APISIM.Data;
 using APISIM.Helpers;
 using APISIM.Dto;
 

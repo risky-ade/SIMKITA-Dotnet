@@ -2,7 +2,7 @@
 using APISIM.Dto;
 using APISIM.Helpers;
 using APISIM.Models;
-using APISIM.Repositories;
+using APISIM.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APISIM.Controllers
@@ -29,7 +29,7 @@ namespace APISIM.Controllers
                 Alamat = req.Alamat,
                 Nik = req.Nik,
                 Telepon = req.Telepon,
-                IdRole = "user",
+                IdRole = "masyarakat",
                 Status = 1 // active
             };
             _context.Users.Add(user);
