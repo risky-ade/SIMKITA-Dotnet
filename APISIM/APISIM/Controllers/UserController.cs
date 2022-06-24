@@ -126,7 +126,7 @@ namespace APISIM.Controllers
             _context.Users.Remove(user);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(new { message = "deleted successfully" });
         }
 
         private bool UserExists(int id)

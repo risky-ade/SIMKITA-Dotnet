@@ -46,19 +46,9 @@ namespace APISIM.Data
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.CreatedAt)
-                    .HasColumnType("timestamp")
-                    .HasColumnName("created_at");
-
                 entity.Property(e => e.Nama)
                     .HasMaxLength(100)
                     .HasColumnName("nama");
-
-                entity.Property(e => e.Status).HasColumnName("status");
-
-                entity.Property(e => e.UpdatedAt)
-                    .HasColumnType("timestamp")
-                    .HasColumnName("updated_at");
             });
 
             modelBuilder.Entity<JenisSim>(entity =>

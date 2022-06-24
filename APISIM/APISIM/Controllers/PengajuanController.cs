@@ -93,7 +93,7 @@ namespace APISIM.Controllers
                     throw;
                 }
             }
-            return NoContent();
+            return Ok(new { message = "updated successfully" });
         }
 
         [HttpDelete("{id}")]
@@ -107,7 +107,7 @@ namespace APISIM.Controllers
             _context.Pengajuans.Remove(pengajuan);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(new { message = "deleted successfully" });
         }
 
         private bool PengajuanExists(int id)

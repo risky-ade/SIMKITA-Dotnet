@@ -16,7 +16,7 @@ namespace APISIM.Controllers
         }
 
         //Post: api/signup
-        [HttpPost("signup")]
+        [HttpPost("api/signup")]
         public async Task<ActionResult<User>> SignUp(RequestRegister req)
         {
             string md5StringPassword = AppHelper.GetMd5Hash(req.Password);

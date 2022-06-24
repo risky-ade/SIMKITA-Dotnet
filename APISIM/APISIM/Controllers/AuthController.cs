@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace APISIM.Controllers
 {
-    [Route("api/signin")]
+    [Route("api/")]
     [ApiController]
     public class AuthController : ControllerBase
     {
