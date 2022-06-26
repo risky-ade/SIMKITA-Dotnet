@@ -56,7 +56,7 @@ namespace APISIM.Controllers
             }
 
             // Binding data
-            string md5StringPassword = (req.Password != "") ? AppHelper.GetMd5Hash(req.Password) : user.Password;
+            string? md5StringPassword = (req.Password != "") ? AppHelper.GetMd5Hash(req.Password) : user.Password;
             user.Nama = req.Nama;
             user.Username = req.Username;
             user.Email = req.Email;
