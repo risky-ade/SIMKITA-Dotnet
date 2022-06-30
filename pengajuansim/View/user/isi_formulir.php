@@ -4,7 +4,7 @@
                 <div class="row m-4">
                     <div class="">
                         <div class="card">
-                            <form class="needs-validation" novalidate="">
+                            <form class="needs-validation" novalidate="" action="" method="">
                                 <div class="card-header">
                                     <h4>Formulir Data Diri</h4>
                                 </div>
@@ -12,14 +12,13 @@
                                     <div class="form-group row mb-2">
                                         <label class="col-sm-3 col-form-label">Jenis SIM</label>
                                         <div class="col-sm-9">
-                                            <select class="custom-select form-control" >
-                                                <option selected>--Pilih salah satu--</option>
-                                                <option value="1" name="jenis_sim">SIM A</option>
-                                                <option value="2" name="jenis_sim">SIM B1</option>
-                                                <option value="3" name="jenis_sim">SIM B2</option>
-                                                <option value="3" name="jenis_sim">SIM C</option>
-                                                <option value="3" name="jenis_sim">SIM D</option>
-                                              </select>
+
+                                            <select name="jenis_sim" class="custom-select form-control">
+                                                <option value="">--Pilih Jenis SIM--</option>
+                                                <?php foreach($jenis as $row) :?>
+                                                    <option value="<?=$row['id']?>"><?=$row['nama'];?></option>
+                                                <?php endforeach;?>
+                                            </select>                                            
                                             <div class="invalid-feedback">
                                                 What's your name?
                                             </div>
@@ -28,7 +27,7 @@
                                     <div class="form-group row mb-2">
                                         <label class="col-sm-3 col-form-label">Nomor SIM</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" required="" name="nomorsim">
+                                        <input type="text" class="form-control" required="" name="nomor_sim" value="<?= $data['nomor_sim'] ?>">
                                             <div class="invalid-feedback">
                                                 What's your name?
                                             </div>
@@ -37,7 +36,7 @@
                                     <div class="form-group row mb-2">
                                         <label class="col-sm-3 col-form-label">Nama</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" required="" name="nama">
+                                        <input type="text" class="form-control" required="" name="nama" value="<?= $data['nama'] ?>">
                                             <div class="invalid-feedback">
                                                 What's your name?
                                             </div>
@@ -46,7 +45,7 @@
                                     <div class="form-group row mb-2">
                                         <label class="col-sm-3 col-form-label">Tempat Lahir</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" required="" name="tempat_lahir">
+                                            <input type="text" class="form-control" required="" name="tempat_lahir" value="<?= $data['tempat_lahir'] ?>">
                                             <div class="invalid-feedback">
                                                 What's your name?
                                             </div>
@@ -55,7 +54,7 @@
                                     <div class="form-group row mb-2">
                                         <label class="col-sm-3 col-form-label">Tanggal Lahir</label>
                                         <div class="col-sm-9">
-                                            <input type="date" class="form-control datepicker" name="tanggal_lahir">
+                                            <input type="date" class="form-control datepicker" name="tanggal_lahir" value="<?= $data['tanggal_lahir'] ?>">
                                             <div class="invalid-feedback">
                                                 What's your name?
                                             </div>
@@ -65,11 +64,11 @@
                                         <label class="col-sm-3 col-form-label">Jenis Kelamin</label>
                                         <div class="col-sm-9">
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" id="inlineradio1" value="option1" name="jenis_kelamin">
+                                                <input class="form-check-input" type="radio" id="inlineradio1" value="option1" name="jenis_kelamin" value="<?= $data['jenis_kelamin'] ?>">
                                                 <label class="form-check-label" for="inlineradio1">Laki-Laki</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" id="inlineradio2" value="option2" name="jenis_kelamin">
+                                                <input class="form-check-input" type="radio" id="inlineradio2" value="option2" name="jenis_kelamin" value="<?= $data['jenis_kelamin'] ?>">
                                                 <label class="form-check-label" for="inlineradio2">Perempuan</label>
                                             </div>
                                             <div class="invalid-feedback">
@@ -80,7 +79,7 @@
                                     <div class="form-group row mb-2">
                                         <label class="col-sm-3 col-form-label">Nomor Telepon</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" required="" name="telepon">
+                                            <input type="text" class="form-control" required="" name="telepon" value="<?= $data['telepon'] ?>">
                                             <div class="invalid-feedback">
                                                 What's your name?
                                             </div>
@@ -89,25 +88,16 @@
                                     <div class="form-group row mb-2">
                                         <label class="col-sm-3 col-form-label">Pekerjaan</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" required="" name="pekerjaan">
+                                            <input type="text" class="form-control" required="" name="pekerjaan" value="<?= $data['pekerjaan'] ?>">
                                             <div class="invalid-feedback">
                                                 What's your name?
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group row mb-2">
-                                        <label class="col-sm-3 col-form-label">RT/RW</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" required="" name="rtrw">
-                                            <div class="invalid-feedback">
-                                                What's your name?
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </div>                                    
                                     <div class="form-group row mb-2">
                                         <label class="col-sm-3 col-form-label">Desa</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" required="" name="desa">
+                                            <input type="text" class="form-control" required="" name="desa" value="<?= $data['desa'] ?>">
                                             <div class="invalid-feedback">
                                                 What's your name?
                                             </div>
@@ -116,7 +106,7 @@
                                     <div class="form-group row mb-2">
                                         <label class="col-sm-3 col-form-label">Kecamatan</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" required="" name="kecamatan">
+                                            <input type="text" class="form-control" required="" name="kecamatan" value="<?= $data['kecamatan'] ?>">
                                             <div class="invalid-feedback">
                                                 What's your name?
                                             </div>
@@ -125,7 +115,7 @@
                                     <div class="form-group row mb-2">
                                         <label class="col-sm-3 col-form-label">Kota</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" required="" name="kota">
+                                            <input type="text" class="form-control" required="" name="kota" value="<?= $data['kota'] ?>">
                                             <div class="invalid-feedback">
                                                 What's your name?
                                             </div>
@@ -134,17 +124,17 @@
                                     <div class="form-group row mb-2">
                                         <label class="col-sm-3 col-form-label">Provinsi</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" required="" name="provinsi">
+                                            <input type="text" class="form-control" required="" name="provinsi" value="<?= $data['provinsi'] ?>">
                                             <div class="invalid-feedback">
                                                 What's your name?
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group row mb-2">
-                                        <label class="col-sm-3 col-form-label">Berkas KTP</label>
+                                        <label class="col-sm-3 col-form-label">Pas Foto 4x6</label>
                                         <div class="col-sm-9">
                                             <div class="custom-file">
-                                                <input type="file" class="custom-file-input form-control" id="customFile" name="berkas_ktp">
+                                                <input type="file" class="custom-file-input form-control" id="customFile" name="foto" value="<?= $data['foto'] ?>">
                                                 <label class="custom-file-label" for="customFile">Choose file</label>
                                             </div>
                                             <div class="invalid-feedback">
@@ -156,7 +146,7 @@
                                         <label class="col-sm-3 col-form-label">Berkas SIM Lama</label>
                                         <div class="col-sm-9">
                                             <div class="custom-file">
-                                                <input type="file" class="custom-file-input form-control" id="customFile" name="berkas_sim">
+                                                <input type="file" class="custom-file-input form-control" id="customFile" name="berkas_sim" value="<?= $data['berkas_sim'] ?>">
                                                 <label class="custom-file-label" for="customFile">Choose file</label>
                                             </div>
                                             <div class="invalid-feedback">

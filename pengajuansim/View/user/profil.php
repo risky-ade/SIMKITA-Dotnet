@@ -24,73 +24,83 @@
                                         <div class="form-group row mb-2">
                                             <label class="col-sm-2 col-form-label">Nomor SIM</label>
                                             <div class="col-sm-10">
-                                            <span type="text" name="nomor_sim" class="form-control" required=""><?= $data['nomor_sim'] ?></span>
+                                            <input type="text" class="form-control" required="" name="nomor_sim" value="<?= $data['nomor_sim'] ?>">
                                             </div>
                                         </div>
                                         <div class="form-group row mb-2">
                                             <label class="col-sm-2 col-form-label">NIK</label>
                                             <div class="col-sm-10">
-                                            <span type="text" name="nomor_sim" class="form-control" required=""><?= $data['nik'] ?></span>
+                                            <input type="text" class="form-control" required="" name="nik" value="<?= $data['nik'] ?>">                                        
                                             </div>
                                         </div>
                                         <div class="form-group row mb-2">
                                             <label class="col-sm-2 col-form-label">Nama Lengkap</label>
                                             <div class="col-sm-10"> 
-                                                <span type="text" name="nomor_sim" class="form-control" required=""><?= $data['nama'] ?></span>                                                                                   
+                                            <input type="text" class="form-control" required="" name="nama" value="<?= $data['nama'] ?>">                                                                                 
                                             </div>
                                         </div>
                                         <div class="form-group row mb-2">
                                             <label class="col-sm-2 col-form-label">Tempat Lahir</label>
                                             <div class="col-sm-10">
-                                            <span type="text" name="nomor_sim" class="form-control" required=""><?= $data['tempat_lahir'] ?></span>
+                                            <input type="text" class="form-control" required="" name="tempat_lahir" value="<?= $data['tempat_lahir'] ?>">
                                             </div>
                                         </div>
                                         <div class="form-group row mb-2">
                                             <label class="col-sm-2 col-form-label">Tanggal Lahir</label>
                                             <div class="col-sm-10">
-                                            <span type="text" name="nomor_sim" class="form-control" required=""><?= $data['tanggal_lahir'] ?></span>
+                                            <input type="text" class="form-control" required="" name="tanggal_lahir" value="<?= $data['tanggal_lahir'] ?>">
                                             </div>
                                         </div>
                                         <div class="form-group row mb-2">
-                                            <label class="col-sm-2 col-form-label">Jenis Kelamin</label>
-                                            <div class="col-sm-10">
-                                            <span type="text" name="nomor_sim" class="form-control" required=""><?= $data['jenis_kelamin'] ?></span>
+                                        <label class="col-sm-3 col-form-label">Jenis Kelamin</label>
+                                        <div class="col-sm-9">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" id="inlineradio1" value="option1" name="jenis_kelamin" value="<?= $data['jenis_kelamin'] ?>">
+                                                <label class="form-check-label" for="inlineradio1">Laki-Laki</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" id="inlineradio2" value="option2" name="jenis_kelamin" value="<?= $data['jenis_kelamin'] ?>">
+                                                <label class="form-check-label" for="inlineradio2">Perempuan</label>
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                What's your name?
                                             </div>
                                         </div>
+                                    </div>
                                         <div class="form-group row mb-2">
                                             <label class="col-sm-2 col-form-label">Nomor Telepon</label>
                                             <div class="col-sm-10">
-                                            <span type="text" name="nomor_sim" class="form-control" required=""><?= $data['telepon'] ?></span>
+                                            <input type="text" class="form-control" required="" name="telepon" value="<?= $data['telepon'] ?>">
                                             </div>
                                         </div>
                                         <div class="form-group row mb-2">
                                             <label class="col-sm-2 col-form-label">Pekerjaan</label>
                                             <div class="col-sm-10">
-                                            <span type="text" name="nomor_sim" class="form-control" required=""><?= $data['pekerjaan'] ?></span>
+                                            <input type="text" class="form-control" required="" name="pekerjaan" value="<?= $data['pekerjaan'] ?>">
                                             </div>
                                         </div>
                                         <div class="form-group row mb-2">
                                             <label class="col-sm-2 col-form-label">Desa</label>
                                             <div class="col-sm-10">
-                                            <span type="text" name="nomor_sim" class="form-control" required=""><?= $data['desa'] ?></span>
+                                            <input type="text" class="form-control" required="" name="desa" value="<?= $data['desa'] ?>">
                                             </div>
                                         </div>
                                         <div class="form-group row mb-2">
                                             <label class="col-sm-2 col-form-label">Kecamatan</label>
                                             <div class="col-sm-10">
-                                            <span type="text" name="nomor_sim" class="form-control" required=""><?= $data['kecamatan'] ?></span>
+                                            <input type="text" class="form-control" required="" name="kecamatan" value="<?= $data['kecamatan'] ?>">
                                             </div>
                                         </div>
                                         <div class="form-group row mb-2">
                                             <label class="col-sm-2 col-form-label">Kota/Kabupaten</label>
                                             <div class="col-sm-10">
-                                            <span type="text" name="nomor_sim" class="form-control" required=""><?= $data['kota'] ?></span>
+                                            <input type="text" class="form-control" required="" name="kota" value="<?= $data['kota'] ?>">
                                             </div>
                                         </div>
                                         <div class="form-group row mb-2">
                                             <label class="col-sm-2 col-form-label">Provinsi</label>
                                             <div class="col-sm-10">
-                                            <span type="text" name="nomor_sim" class="form-control" required=""><?= $data['provinsi'] ?></span>
+                                            <input type="text" class="form-control" required="" name="provinsi" value="<?= $data['provinsi'] ?>">
                                             </div>
                                         </div>
 

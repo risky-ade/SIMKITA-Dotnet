@@ -15,7 +15,7 @@ class AuthController
     // Function index berfungsi untuk mengatur tampilan login
     public function login()
     {
-        require_once("view/auth/login.php");
+        require_once("view/auth/login_user.php");
     }
     
     public function sidebar()

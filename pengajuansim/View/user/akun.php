@@ -20,21 +20,27 @@
                                             <button class="btn btn-primary">Save Edit</button>
                                         </div>
                                         <div class="form-group row mb-2">
+                                            <label class="col-sm-2 col-form-label">Username</label>
+                                            <div class="col-sm-10">
+                                            <input type="text" class="form-control" required="" name="username" value="<?= $data['username'] ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row mb-2">
                                             <label class="col-sm-2 col-form-label">Email</label>
                                             <div class="col-sm-10">
-                                                <input type="email" class="form-control" required="">
+                                            <input type="email" class="form-control" required="" name="email" value="<?= $data['email'] ?>">
                                             </div>
                                         </div>
                                         <div class="form-group row mb-2">
                                             <label class="col-sm-2 col-form-label">NIK</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" required="">
+                                            <input type="text" class="form-control" required="" name="nik" value="<?= $data['nik'] ?>">
                                             </div>
                                         </div>
                                         <div class="form-group row mb-2">
                                             <label class="col-sm-2 col-form-label">Password</label>
                                             <div class="col-sm-10">
-                                                <input type="password" class="form-control" required="">
+                                            <input type="password" class="form-control" required="" name="password" value="<?= $data['password'] ?>">
                                             </div>
                                         </div>
                                     </div>
