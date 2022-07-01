@@ -1,13 +1,21 @@
+
+
+
+
 <div class="container-fluid px-4">
                     <h1 class="mt-4"></h1>
                     <ol class="breadcrumb mb-4">
-
-                    </ol>
+<!-- start Content -->
+<div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    
+                    <form action="index.php?page=user&aksi=update" method="post" novalidate="" enctype="multipart/form-data">
                     <div class="row">
-                        <div class="col-xl-2 col-md-6 ">
-                            <div class="card bg-light text-white mb-4">
-                                <div class="card-body "><img src="assets/img/kaktus.jpg" width="100" height="125" alt="Photo profil">
-                                    <input type="file" id="customFile">
+                        <div class="col-xl-2 col-md-6 mt-5">
+                            <div class="card bg-light text-white mb-4 mt-4">
+                                <div class="card-body"><img src="<?php echo $data['foto'] ?>" name="foto" width="150" height="200" alt="Photo profil">
+                                    <input type="file" id="customFile" name="foto" class="mt-4">
                                 </div>
                             </div>
                         </div>
