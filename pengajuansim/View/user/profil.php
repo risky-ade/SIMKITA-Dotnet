@@ -23,6 +23,12 @@
                                             <button class="btn btn-primary">Save Edit</button>
                                         </div>
                                         <div class="form-group row mb-2">
+                                            <label class="col-sm-2 col-form-label">Jenis SIM</label>
+                                            <div class="col-sm-10">
+                                            <input type="text" class="form-control" required="" name="jenis_sim" value="<?= $data['jenis_sim'] ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row mb-2">
                                             <label class="col-sm-2 col-form-label">Nomor SIM</label>
                                             <div class="col-sm-10">
                                             <input type="text" class="form-control" required="" name="nomor_sim" value="<?= $data['nomor_sim'] ?>">

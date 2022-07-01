@@ -52,6 +52,8 @@ if (isset($_GET['page']) && isset($_GET['aksi'])) {
                 $user->akun();
             }else if ($aksi == 'update') {
                 $user->update();
+            }else if ($aksi == 'updateForm') {
+                $user->updateFormulir();
             }
             else {
                 echo "Method Not Found";

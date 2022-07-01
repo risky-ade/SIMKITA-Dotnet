@@ -4,7 +4,7 @@
                 <div class="row m-4">
                     <div class="">
                         <div class="card">
-                            <form class="needs-validation" novalidate="" action="index.php?page=user&aksi=update" method="post">
+                            <form class="needs-validation" novalidate="" action="index.php?page=user&aksi=updateForm" method="post">
                                 <div class="card-header">
                                     <h4>Formulir Data Diri</h4>
                                 </div>

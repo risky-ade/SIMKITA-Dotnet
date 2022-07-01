@@ -48,6 +48,27 @@ class UserController
         require_once("view/user/dashboard.php");
     }
 
+    public function updateFormulir()
+    {
+        $nomor_sim = $_POST['nomor_sim'];
+        $nama = $_POST['nama'];
+        $tempat_lahir = $_POST['tempat_lahir'];
+        $tanggal_lahir = $_POST['tanggal_lahir'];
+        $jenis_kelamin = $_POST['jenis_kelamin'];
+        $telepon = $_POST['telepon'];
+        $pekerjaan = $_POST['pekerjaan'];
+        $desa = $_POST['desa'];
+        $kecamatan = $_POST['kecamatan'];
+        $kota = $_POST['kota'];
+        $provinsi = $_POST['provinsi'];
+
+        if($this->model->updateForm($nomor_sim, $nama, $tempat_lahir, $tanggal_lahir,$jenis_kelamin,$telepon,$pekerjaan,$desa,$kecamatan,$kota,$provinsi)){
+            header("location: index.php?page=user&aksi=isiFormulir&pesan=Berhasil Ubah Data");
+        }else{
+            header("location: index.php?page=user&aksi=isiFormulir&pesan=Gagal Ubah Data");
+        }
+    }
+
     public function update()
     {        
         $nomor_sim = $_POST['nomor_sim'];
@@ -92,44 +113,20 @@ class UserController
             $uploadOk = 0;
         }
         // Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
-  // if everything is ok, try to upload file
-  } else {
-    if (move_uploaded_file($_FILES["foto"]["tmp_name"], $target_file)) {
-    //   echo "The file ". htmlspecialchars( basename( $_FILES["foto"]["name"])). " has been uploaded.";
-    } else {
-      echo "Sorry, there was an error uploading your file.";
-    }
-  }
-        // $rand = rand();
-        // $ekstensi =  array('png','jpg','jpeg');
-        // $filename = $_FILES['foto']['name'];
-        // var_dump($filename);
-        // die();
-        // $ukuran = $_FILES['foto']['size'];
-        // $ext = pathinfo($filename, PATHINFO_EXTENSION);
-        
-        // if(!in_array($ext,$ekstensi) ) {
-        //     header("location:index.php?alert=Ekstensi Tidak Sesuai");
-        // }else{
-        //     if($ukuran < 1044070){		
-        //         $xx = $rand.'_'.$filename;
-        //         move_uploaded_file($_FILES['foto']['tmp_name'], 'assets/berkas/foto/'.$rand.'_'.$filename);
-
-        //         if($this->model->updateFormulir($xx,$nomor_sim, $nama, $tempat_lahir, $tanggal_lahir,$jenis_kelamin,$telepon,$pekerjaan,$desa,$kecamatan,$kota,$provinsi)){
-        //             header("location: index.php?page=user&aksi=isiFormulir&pesan=Berhasil Ubah Data");
-        //         }
-        //     }else{
-        //         header("location: index.php?page=user&aksi=isiFormulir&pesan=Gagal Ubah Data");
-        //     }
-        // }
-        
-
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+        // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["foto"]["tmp_name"], $target_file)) {
+            //   echo "The file ". htmlspecialchars( basename( $_FILES["foto"]["name"])). " has been uploaded.";
+            } else {
+            echo "Sorry, there was an error uploading your file.";
+            }
+        }
         if($this->model->updateFormulir($target_file,$nomor_sim, $nama, $tempat_lahir, $tanggal_lahir,$jenis_kelamin,$telepon,$pekerjaan,$desa,$kecamatan,$kota,$provinsi)){
-            header("location: index.php?page=user&aksi=isiFormulir&pesan=Berhasil Ubah Data");
+            header("location: index.php?page=user&aksi=profil&pesan=Berhasil Ubah Data");
         }else{
-            header("location: index.php?page=user&aksi=isiFormulir&pesan=Gagal Ubah Data");
+            header("location: index.php?page=user&aksi=profil&pesan=Gagal Ubah Data");
         }
     }
 
