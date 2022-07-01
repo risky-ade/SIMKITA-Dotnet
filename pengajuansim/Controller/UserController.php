@@ -48,6 +48,7 @@ class UserController
         require_once("view/user/dashboard.php");
     }
 
+    // formulir
     public function updateFormulir()
     {
         $nomor_sim = $_POST['nomor_sim'];
@@ -69,6 +70,7 @@ class UserController
         }
     }
 
+    // profil
     public function update()
     {        
         $nomor_sim = $_POST['nomor_sim'];
