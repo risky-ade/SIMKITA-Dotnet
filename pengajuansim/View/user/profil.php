@@ -6,17 +6,18 @@
                     <ol class="breadcrumb mb-4">
 
                     </ol>
+                    <form action="index.php?page=user&aksi=update" method="post" novalidate="" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-xl-2 col-md-6 ">
                             <div class="card bg-light text-white mb-4">
-                                <div class="card-body "><img src="assets/img/kaktus.jpg" width="100" height="125" alt="Photo profil">
-                                    <input type="file" id="customFile">
+                                <div class="card-body"><img src="<?php echo $data['foto'] ?>" name="foto" width="100" height="125" alt="Photo profil">
+                                    <input type="file" id="customFile" name="foto">
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-10 col-md-6">
                             <div class="card mb-4">
-                                <form action="index.php?page=user&aksi=update" method="post" novalidate="">
+                                
                                     <div class="card-body">
                                         <div class="text-right d-flex justify-content-end mb-2">
                                             <button class="btn btn-primary">Save Edit</button>
@@ -48,7 +49,7 @@
                                         <div class="form-group row mb-2">
                                             <label class="col-sm-2 col-form-label">Tanggal Lahir</label>
                                             <div class="col-sm-10">
-                                            <input type="text" class="form-control" required="" name="tanggal_lahir" value="<?= $data['tanggal_lahir'] ?>">
+                                            <input type="text" class="form-control" required="" name="tanggal_lahir" value="<?= $data['tanggal_lahir'] ?>" placeholder="yyyy-mm-dd">
                                             </div>
                                         </div>
                                         <div class="form-group row mb-2">

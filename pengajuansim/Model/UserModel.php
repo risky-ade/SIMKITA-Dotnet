@@ -38,11 +38,12 @@ class UserModel
         return $hasil;
     }
 
-    public function updateFormulir($nomor_sim, $nama, $tempat_lahir, $tanggal_lahir,$jenis_kelamin,$telepon,$pekerjaan,$desa,$kecamatan,$kota,$provinsi)
+    public function updateFormulir($foto,$nomor_sim, $nama, $tempat_lahir, $tanggal_lahir,$jenis_kelamin,$telepon,$pekerjaan,$desa,$kecamatan,$kota,$provinsi)
     {
-        $sql = "UPDATE users SET nomor_sim='$nomor_sim', nama='$nama', 
+        $sql = "UPDATE users SET foto='$foto',nomor_sim='$nomor_sim', nama='$nama', 
         tempat_lahir='$tempat_lahir', tanggal_lahir='$tanggal_lahir',jenis_kelamin='$jenis_kelamin',
         telepon='$telepon',pekerjaan='$pekerjaan',desa='$desa',kecamatan='$kecamatan',kota='$kota',provinsi='$provinsi'";
+        
         $query = koneksi()->query($sql);
         return $query;
     }
