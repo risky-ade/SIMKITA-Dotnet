@@ -5,9 +5,9 @@
                     <div class="row">
                         <div class="col-xl-4 col-md-6">
                             <div class="card bg-primary text-white mb-4">
-                                <div class="card-body sb-nav-link-icon fs-3 text-center"><i class="fas fa-book-open"></i>Data Formulir</div>
+                                <div class="card-body sb-nav-link-icon fs-3 text-center"><i class="fas fa-book-open"></i>Dashboard</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">Selengkapnya</a>
+                                    <a class="small text-white stretched-link" href="index.php?page=user&aksi=dashboard">Selengkapnya</a>
                                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                 </div>
                             </div>
@@ -16,7 +16,7 @@
                             <div class="card bg-warning text-white mb-4">
                                 <div class="card-body fs-3 text-center"><i class="ri-file-list-3-line w-50"></i>Isi Formulir</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">Selengkapnya</a>
+                                    <a class="small text-white stretched-link" href="index.php?page=user&aksi=isiFormulir">Selengkapnya</a>
                                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                 </div>
                             </div>
@@ -25,7 +25,7 @@
                             <div class="card bg-success text-white mb-4">
                                 <div class="card-body fs-3 "><i class="ri-user-2-fill"></i>Profil</div>
                                 <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <a class="small text-white stretched-link" href="#">Selengkapnya</a>
+                                    <a class="small text-white stretched-link" href="index.php?page=user&aksi=profil">Selengkapnya</a>
                                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                 </div>
                             </div>
