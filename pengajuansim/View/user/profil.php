@@ -16,7 +16,7 @@
                         </div>
                         <div class="col-xl-10 col-md-6">
                             <div class="card mb-4">
-                                <form action="" novalidate="">
+                                <form action="index.php?page=user&aksi=update" method="post" novalidate="">
                                     <div class="card-body">
                                         <div class="text-right d-flex justify-content-end mb-2">
                                             <button class="btn btn-primary">Save Edit</button>
@@ -52,21 +52,21 @@
                                             </div>
                                         </div>
                                         <div class="form-group row mb-2">
-                                        <label class="col-sm-3 col-form-label">Jenis Kelamin</label>
-                                        <div class="col-sm-9">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" id="inlineradio1" value="option1" name="jenis_kelamin" value="<?= $data['jenis_kelamin'] ?>">
-                                                <label class="form-check-label" for="inlineradio1">Laki-Laki</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" id="inlineradio2" value="option2" name="jenis_kelamin" value="<?= $data['jenis_kelamin'] ?>">
-                                                <label class="form-check-label" for="inlineradio2">Perempuan</label>
-                                            </div>
-                                            <div class="invalid-feedback">
-                                                What's your name?
+                                            <label class="col-sm-3 col-form-label">Jenis Kelamin</label>
+                                            <div class="col-sm-9">                                   
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" id="inlineradio1" name="jenis_kelamin" value="L" <?php if($data['jenis_kelamin']=='L') echo 'checked'?>>
+                                                    <label class="form-check-label" for="inlineradio1">Laki-Laki</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" id="inlineradio2" name="jenis_kelamin" value="P" <?php if($data['jenis_kelamin']=='P') echo 'checked'?>>
+                                                    <label class="form-check-label" for="inlineradio2">Perempuan</label>
+                                                </div>
+                                                <div class="invalid-feedback">
+                                                    What's your name?
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
                                         <div class="form-group row mb-2">
                                             <label class="col-sm-2 col-form-label">Nomor Telepon</label>
                                             <div class="col-sm-10">

@@ -50,6 +50,8 @@ if (isset($_GET['page']) && isset($_GET['aksi'])) {
                 $user->profil();
             }else if ($aksi == 'akun') {
                 $user->akun();
+            }else if ($aksi == 'update') {
+                $user->update();
             }
             else {
                 echo "Method Not Found";

@@ -4,7 +4,7 @@
                 <div class="row m-4">
                     <div class="">
                         <div class="card">
-                            <form class="needs-validation" novalidate="" action="" method="">
+                            <form class="needs-validation" novalidate="" action="index.php?page=user&aksi=update" method="post">
                                 <div class="card-header">
                                     <h4>Formulir Data Diri</h4>
                                 </div>
@@ -62,13 +62,13 @@
                                     </div>
                                     <div class="form-group row mb-2">
                                         <label class="col-sm-3 col-form-label">Jenis Kelamin</label>
-                                        <div class="col-sm-9">
+                                        <div class="col-sm-9">                                   
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" id="inlineradio1" value="option1" name="jenis_kelamin" value="<?= $data['jenis_kelamin'] ?>">
+                                                <input class="form-check-input" type="radio" id="inlineradio1"name="jenis_kelamin" value="L" <?php if($data['jenis_kelamin']=='L') echo 'checked'?>>
                                                 <label class="form-check-label" for="inlineradio1">Laki-Laki</label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" id="inlineradio2" value="option2" name="jenis_kelamin" value="<?= $data['jenis_kelamin'] ?>">
+                                                <input class="form-check-input" type="radio" id="inlineradio2" name="jenis_kelamin" value="P" <?php if($data['jenis_kelamin']=='P') echo 'checked'?>>
                                                 <label class="form-check-label" for="inlineradio2">Perempuan</label>
                                             </div>
                                             <div class="invalid-feedback">
@@ -156,7 +156,7 @@
                                     </div>
                                 </div>
                                 <div class="card-footer text-right">
-                                    <button class="btn btn-primary">Submit</button>
+                                    <button class="btn btn-primary">Simpan Formulir</button>
                                 </div>
                             </form>
                         </div>
